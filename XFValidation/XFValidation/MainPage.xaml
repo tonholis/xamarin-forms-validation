@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:XFValidation;assembly=XFValidation"
+			 xmlns:v="clr-namespace:XFValidation.Behaviors;assembly=XFValidation"
+             x:Class="XFValidation.MainPage">
+
+	<StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="Center">
+		<AbsoluteLayout HorizontalOptions="FillAndExpand">
+			<Entry Placeholder="E-mail address"
+				   AbsoluteLayout.LayoutBounds="0,0,1,40"
+				   AbsoluteLayout.LayoutFlags="PositionProportional,WidthProportional">
+				<Entry.Behaviors>
+					<v:EmailValidator ErrorMessage="Invalid email" />
+					<v:RequiredValidator ErrorMessage="Required field"/>
+					<v:EntryValidator x:Name="emailValidation" />
+
+					<!--This is not a validator, it's just a regular behavor to limit how many digits are allowed-->
+					<v:MaxLengthBehavior MaxLength="50" />
+				</Entry.Behaviors>
+			</Entry>
+			<Image Source="{local:ImageResource XFValidation.Images.success.png}"
+				   IsVisible="{Binding Source={x:Reference emailValidation}, Path=Success}"
+				   AbsoluteLayout.LayoutBounds=".99,.5,20,20"
+				   AbsoluteLayout.LayoutFlags="PositionProportional"/>
+		</AbsoluteLayout>
+
+		<Label TextColor="Red" FontSize="Small"
+				   Text="{Binding Source={x:Reference emailValidation}, Path=ErrorMessage}" />
+	</StackLayout>
+</ContentPage>
