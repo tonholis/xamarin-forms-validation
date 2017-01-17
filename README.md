@@ -13,7 +13,7 @@ That's why I created a class called EntryValidator that evaluates the Behaviors 
 ![Required Validator](https://raw.githubusercontent.com/tonholis/xamarin-forms-validation/master/screenshot1.png)
 
 ##Email Validator
-![Email Validator](https://raw.githubusercontent.com/tonholis/xamarin-forms-validation/master/screenshot1.png)
+![Email Validator](https://raw.githubusercontent.com/tonholis/xamarin-forms-validation/master/screenshot2.png)
 
 ##Success State 
-![Success State](https://raw.githubusercontent.com/tonholis/xamarin-forms-validation/master/screenshot1.png)
+![Success State](https://raw.githubusercontent.com/tonholis/xamarin-forms-validation/master/screenshot3.png)
