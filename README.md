@@ -3,7 +3,7 @@ A sample entry validation using Behaviors and XAML in Xamarin Forms
 
 This sample is based on this article:
 
-https://blog.xamarin.com/behaviors-in-xamarin-forms/
+https://devblogs.microsoft.com/xamarin/behaviors-in-xamarin-forms/
 
 
 But I need to attach multiple validators (behaviors) on a Entry field and get which validator fails to display the right the right error message. 
